@@ -1,0 +1,20 @@
+/**
+ * @param {string} S
+ * @return {string}
+ */
+var removeOuterParentheses = function(S) {
+    let strLength = S.length;
+    let cChar = "";
+    let pChar = "";
+    let result = "";
+    for(let i = 0; i<S.length; i++){
+        cChar = S[i];
+        if(cChar !== pChar){
+            result+=cChar;
+        }
+        pChar = cChar;
+        
+    }
+    
+    return result;
+};
